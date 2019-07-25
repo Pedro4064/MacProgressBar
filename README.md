@@ -30,7 +30,7 @@
 ### Documentation
 
 1- Create the bar object (an instance of the ProgressBar class), and set the max value, the style, initial message and rather you want to show the percentage or not.<br/>
-`bar = ProgressBar(max = 20,style = 'apple',message = '',percent = True)`
+`bar = ProgressBar(max = 20, style = 'apple', message = '', percent = True)`
 
 2- Update the progress bar<br/>
 `bar.next(message = '')`
