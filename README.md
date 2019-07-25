@@ -29,8 +29,8 @@
 
 ### Documentation
 
-1- Create the bar object (an instance of the ProgressBar class), and set the max value, the style and initial message.<br/>
-`bar = ProgressBar(max = 20,style = 'apple',message = ''`
+1- Create the bar object (an instance of the ProgressBar class), and set the max value, the style, initial message and rather you want to show the percentage or not.<br/>
+`bar = ProgressBar(max = 20,style = 'apple',message = '',percent = True`
 
 2- Update the progress bar<br/>
 `bar.next(message = '')`
@@ -48,3 +48,8 @@ ___
 #### message:
 •The message that appears next to the preogress bar.<br/>
 •The default value is `''` (an empty string).
+
+#### percent:
+•To show the percentage of completed work add `percent = True`.<br/>
+•The default value is `False` (not showing the percentage).
+
