@@ -6,7 +6,7 @@ class ProgressBar:
         
         # Get the argumetns passed
         self.max = kwars.get('max')
-        self.type = kwars.get('type')
+        self.type = kwars.get('style')
         self.message = kwars.get('message')
 
         # if any of them are None, add values so it won't crash
@@ -75,4 +75,4 @@ class ProgressBar:
             sys.stdout.write("\033[K")
             sys.stdout.write('\r'+self.bar)
             sys.stdout.flush()
-        
+                    
