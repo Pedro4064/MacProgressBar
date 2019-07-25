@@ -24,3 +24,5 @@
 
 ### Message
 •You may also display a message every time you update the progress bar, so you know which step of the process the script is executing.
+
+![](https://github.com/Pedro4064/MacProgressBar/blob/master/Videos/message.gif?raw=true)
