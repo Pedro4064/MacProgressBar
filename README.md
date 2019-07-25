@@ -20,6 +20,7 @@
 
 #### Example:
 
-`bar = ProgressBar(max = 100, style = 'apple',message = 'Testing')`
+![](https://github.com/Pedro4064/MacProgressBar/blob/master/Videos/styleExample.gif?raw=true)
 
-[]()
+### Message
+•You may also display a message every time you update the progress bar, so you know which step of the process the script is executing.
