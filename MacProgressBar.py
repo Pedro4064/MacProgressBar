@@ -8,6 +8,8 @@ class ProgressBar:
         self.max = kwars.get('max')
         self.type = kwars.get('style')
         self.message = kwars.get('message')
+        self.percent = kwars.get('percent')
+        
 
         # if any of them are None, add values so it won't crash
         if self.max == None:
@@ -59,9 +61,15 @@ class ProgressBar:
             self.bar = self.bar+' '
             
         
+        # If the percent argument is True, calculate it and add to the progress bar
+        if self.percent == True:
+            self.percentage = self.counter*100/self.max
+            # Format the bar by adding the beginning and end of the progressbar '|' plus the percentage
+            self.bar = '|'+self.bar+'|'+' '+str(self.percentage)+'% '+self.message
 
-        # Format the bar by adding the beginning and end of the progressbar '|'
-        self.bar = '|'+self.bar+'|'+' '+self.message
+        else:
+            # Format the bar by adding the beginning and end of the progressbar '|'
+            self.bar = '|'+self.bar+'|'+' '+self.message
 
         # If it is the last iteration, print the bar and a newline, else print just the bar
         if 32-self.numberOfBlocks == 0:
@@ -75,4 +83,8 @@ class ProgressBar:
             sys.stdout.write("\033[K")
             sys.stdout.write('\r'+self.bar)
             sys.stdout.flush()
-                    
+
+
+
+    
+    
