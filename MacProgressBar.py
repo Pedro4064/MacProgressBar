@@ -74,17 +74,14 @@ class ProgressBar:
         # If it is the last iteration, print the bar and a newline, else print just the bar
         if 32-self.numberOfBlocks == 0:
             # Clear the line, print it and flush(show)
-            sys.stdout.write("\033[K")
+            sys.stdout.write("\x1b[2K")
+            sys.stdout.flush()
             sys.stdout.write('\r'+self.bar+'\n')
             sys.stdout.flush()
 
         else:
             # Clear the line, print it and flush(show)
-            sys.stdout.write("\033[K")
+            sys.stdout.write("\x1b[2K")
+            sys.stdout.flush()
             sys.stdout.write('\r'+self.bar)
             sys.stdout.flush()
-
-
-
-    
-    
